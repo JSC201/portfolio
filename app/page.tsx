@@ -16,7 +16,7 @@ export default function Home() {
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
           <div className="text-neutral-600 leading-relaxed space-y-4">
             <p>
-              Hello! Thank you for stopping by! I&apos;m a Data Platform Engineer at First Principles, currently building financial market
+              Hello! I&apos;m a Data Platform Engineer at First Principles, currently building financial market
               data infrastructure for Mosaic.
             </p>
             <p>
@@ -27,8 +27,7 @@ export default function Home() {
               holds up under real pressure. 
             </p>
             <p>
-              I&apos;m just getting started on this journey and would love to connect along the way! 
-            </p>
+              Feel free to explore my projects and research below. Thank you for stopping by!            </p>
           </div>
         </div>
         <img
