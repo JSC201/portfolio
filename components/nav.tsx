@@ -19,7 +19,7 @@ export default function Nav() {
           </svg>
         </a>
         <a
-          href="https://github.com/YOUR_USERNAME"
+          href="https://github.com/JSC201"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-neutral-900 transition-colors"
