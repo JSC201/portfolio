@@ -4,7 +4,7 @@ const config: Config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './content/**/*.{mdx}',
+    './content/**/*.mdx',
     './algo-visualizer/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
