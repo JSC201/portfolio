@@ -1,0 +1,111 @@
+---
+title: "Epileptic Neuron Modeling"
+description: "Simulating pyramidal neuron dynamics under normal and epileptic conditions using extended Hodgkin-Huxley equations in MATLAB."
+date: "2025-12"
+---
+
+## Overview
+
+This is a computational neuroscience research project I completed in MATLAB. The goal was to model a cortical pyramidal neuron under normal and epileptic conditions, then simulate how two anticonvulsant drugs—phenytoin and ketamine—affect the neuron's firing behavior.
+
+Epilepsy is a neurological disorder characterized by recurrent seizures caused by abnormal, excessive electrical discharge. It effectively turns a normal neuronal network into a hyperexcitable one. Understanding the specific ion channel mechanisms that drive this hyperexcitability is important for developing targeted treatments. Computational modeling provides a controlled, reproducible platform to isolate these mechanisms and assess how drugs modulate them—without the variability of biological experiments.
+
+My hypothesis was that both phenytoin and ketamine would reduce the hyperexcitability of the epileptic neuron and bring its firing rate closer to the normal baseline. Phenytoin stabilizes sodium channel inactivation to limit repetitive firing; ketamine blocks NMDA receptor activity to reduce prolonged depolarization. The two drugs target different mechanisms, so comparing them also offers insight into which pathway contributes more to epileptic burst firing.
+
+The model builds on the Hodgkin-Huxley (HH) framework and extends it with calcium and NMDA receptor channels from the Connors-Stevens model to better reflect pyramidal neuron physiology. I first established a control (normal) neuron, then produced the epileptic condition through parameter tuning, and finally ran separate simulations for each drug treatment.
+
+---
+
+## MATLAB Simulation
+
+Click each preset to see how the membrane potential trace and action potential count change across conditions.
+
+<NeuronSimulator />
+
+---
+
+## Key Results
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1px',margin:'2rem 0',background:'#d4d4d4',borderRadius:'0.5rem',overflow:'hidden'}}>
+  <div style={{background:'#faf8f4',padding:'1.5rem 1rem',textAlign:'center'}}>
+    <div style={{fontSize:'2rem',fontWeight:'700',fontFamily:'sans-serif',color:'#737373',lineHeight:1,marginBottom:'0.5rem'}}>4</div>
+    <div style={{fontSize:'0.75rem',fontFamily:'sans-serif',color:'#666'}}>Normal neuron</div>
+  </div>
+  <div style={{background:'#faf8f4',padding:'1.5rem 1rem',textAlign:'center'}}>
+    <div style={{fontSize:'2rem',fontWeight:'700',fontFamily:'sans-serif',color:'#b91c1c',lineHeight:1,marginBottom:'0.5rem'}}>38</div>
+    <div style={{fontSize:'0.75rem',fontFamily:'sans-serif',color:'#666'}}>Epileptic neuron</div>
+  </div>
+  <div style={{background:'#faf8f4',padding:'1.5rem 1rem',textAlign:'center'}}>
+    <div style={{fontSize:'2rem',fontWeight:'700',fontFamily:'sans-serif',color:'#1d4ed8',lineHeight:1,marginBottom:'0.5rem'}}>24</div>
+    <div style={{fontSize:'0.75rem',fontFamily:'sans-serif',color:'#666'}}>With phenytoin</div>
+  </div>
+  <div style={{background:'#faf8f4',padding:'1.5rem 1rem',textAlign:'center'}}>
+    <div style={{fontSize:'2rem',fontWeight:'700',fontFamily:'sans-serif',color:'#15803d',lineHeight:1,marginBottom:'0.5rem'}}>27</div>
+    <div style={{fontSize:'0.75rem',fontFamily:'sans-serif',color:'#666'}}>With ketamine</div>
+  </div>
+</div>
+
+The epileptic model produced nearly 10× the spike rate of the normal control. Treatment with both drugs reduced the firing rate, supporting the hypothesis. Phenytoin reduced spikes by 37% from the epileptic baseline; ketamine by 29%. Phenytoin's larger reduction is consistent with its primary mechanism—sodium channel blockade is more effective against the rapid, repetitive firing that dominates epileptic bursting than NMDA antagonism alone.
+
+---
+
+## Model
+
+The model integrates four ion channels. Sodium and potassium channels follow standard Hodgkin-Huxley kinetics; calcium and NMDA channels use Connors-Stevens slow kinetics to capture the sustained depolarizations characteristic of burst firing.
+
+**Sodium (Na⁺):** Gated by activation (*m*) and inactivation (*h*) variables. Opens rapidly on depolarization, driving the rising phase of each action potential. Subsequent inactivation terminates the spike.
+
+**Potassium (K⁺):** Gated by activation (*n*). Slower to open than sodium; drives repolarization and the afterhyperpolarization phase.
+
+**Calcium (Ca²⁺):** Activation follows a sigmoidal voltage dependence with a slower time constant. Contributes to burst firing and intracellular signaling.
+
+**NMDA:** Voltage- and ligand-gated with a slow time constant (τ = 50 ms). Blocked by extracellular Mg²⁺ at rest; contributes to prolonged depolarizations at depolarized potentials.
+
+The membrane potential update at each time step:
+
+<div style={{fontFamily:'monospace',fontSize:'0.85rem',background:'#f0ede8',padding:'0.75rem 1rem',borderRadius:'0.375rem',margin:'1rem 0',color:'#444',lineHeight:1.6}}>
+  dV/dt = (I_app − I_Na − I_K − I_Ca − I_NMDA − I_leak) / Cm
+</div>
+
+Gating variables are updated using the exponential integration method, which gives the exact analytical solution to the linearized ODE at each step and is stable at larger time steps than Forward Euler.
+
+---
+
+## Epileptic Condition
+
+The epileptic model was produced by modifying conductance parameters to replicate the hyperexcitability characteristic of epileptic pyramidal neurons:
+
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0.5rem 3rem',fontFamily:'sans-serif',fontSize:'0.82rem',margin:'1rem 0',color:'#555'}}>
+  <div>↑ gNa: 100 → 160 (enhanced depolarization)</div>
+  <div>↓ gK: 45 → 18 (slowed repolarization)</div>
+  <div>↑ gCa: 0.3 → 0.4 (prolonged depolarization)</div>
+  <div>↓ gLeak: 0.3 → 0.1 (increased excitability)</div>
+  <div>↑ gNMDA: 0.15 → 0.25 (sustained bursting)</div>
+  <div>↑ I_app: 100 → 200 pA, extended to 800 ms</div>
+</div>
+
+---
+
+## Pharmacology
+
+**Phenytoin** is an anticonvulsant that stabilizes voltage-gated sodium channels in their inactivated state, limiting repetitive high-frequency firing. In the model: gNa reduced from 160 → 120, gCa reduced from 0.4 → 0.12, and the sodium inactivation time constant (τh) multiplied by 1.5 to reflect prolonged channel inactivation.
+
+**Ketamine** is an NMDA receptor antagonist that blocks the ion channel when open, reducing calcium influx and the prolonged depolarization it produces. In the model: gNMDA reduced from 0.25 → 0.1. gCa was also modestly reduced (0.4 → 0.2) to reflect reduced calcium entry secondary to NMDA blockade.
+
+Both drugs reduced firing toward the normal baseline, consistent with their clinical mechanisms. Phenytoin achieved a larger reduction, consistent with its first-line use in tonic-clonic seizures where fast sodium channel firing is the primary driver.
+
+---
+
+## Implementation
+
+Implemented in MATLAB using forward Euler integration for membrane potential and the exponential method for gating variables. Simulation window: 1000 ms, dt = 0.001 ms. Spikes counted by detecting threshold crossings at −55 mV.
+
+```matlab
+% Exponential gating variable update (exact for linearized ODE)
+m_Na = m_inf - (m_inf - m_Na) * exp(-dt / tau_m);
+h_Na = h_inf - (h_inf - h_Na) * exp(-dt / tau_h);  % tau_h *= 1.5 for phenytoin
+
+% Membrane potential (Forward Euler)
+dV = ((-I_Na - I_Kd - I_Ca - I_NMDA - I_leak + I_app(t)) / C_m) * dt;
+Vm(t+1) = Vm(t) + dV;
+```
