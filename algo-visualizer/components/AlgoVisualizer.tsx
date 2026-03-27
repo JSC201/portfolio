@@ -58,14 +58,6 @@ export function AlgoVisualizer() {
             <span className="text-sm text-neutral-700 truncate">
               {runner.step?.description ?? 'Press Play or Step Forward to begin'}
             </span>
-            <a
-              href="https://github.com/justinjchang/algo-visualizer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-auto shrink-0 text-xs text-neutral-400 hover:text-neutral-700 transition-colors duration-100"
-            >
-              View source →
-            </a>
           </div>
 
           {/* Visualization + right panel */}
