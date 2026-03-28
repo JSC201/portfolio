@@ -28,7 +28,7 @@ export default function Nav() {
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
           </svg>
         </a>
-        <Link href="/about" className="text-xs font-medium border border-neutral-300 rounded px-3 py-1.5 hover:border-neutral-500 hover:bg-neutral-100 transition-all text-neutral-500 hover:text-neutral-900"
+        <Link href="/about" className="text-xs font-medium border border-neutral-300 rounded px-3 py-1.5 hover:border-neutral-500 hover:bg-neutral-100 transition-all text-neutral-500 hover:text-neutral-900">
           About
         </Link>
         <a
