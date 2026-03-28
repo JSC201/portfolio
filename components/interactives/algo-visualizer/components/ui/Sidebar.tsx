@@ -1,6 +1,6 @@
 'use client';
 
-import type { AlgorithmDef, AlgorithmCategory } from '@/algo-visualizer/lib/types';
+import type { AlgorithmDef, AlgorithmCategory } from '@/components/interactives/algo-visualizer/lib/types';
 
 interface SidebarProps {
   algorithms: AlgorithmDef[];

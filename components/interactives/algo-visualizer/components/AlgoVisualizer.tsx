@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { algorithms } from '@/algo-visualizer/lib/algorithms/registry';
-import { useRunner } from '@/algo-visualizer/hooks/useRunner';
-import { Sidebar } from '@/algo-visualizer/components/ui/Sidebar';
-import { ControlPanel } from '@/algo-visualizer/components/ui/ControlPanel';
-import { Pseudocode } from '@/algo-visualizer/components/ui/Pseudocode';
-import { MetricsPanel } from '@/algo-visualizer/components/ui/MetricsPanel';
-import { SortingVisualizer } from '@/algo-visualizer/components/visualizers/SortingVisualizer';
-import { GraphVisualizer } from '@/algo-visualizer/components/visualizers/GraphVisualizer';
+import { algorithms } from '@/components/interactives/algo-visualizer/lib/algorithms/registry';
+import { useRunner } from '@/components/interactives/algo-visualizer/hooks/useRunner';
+import { Sidebar } from '@/components/interactives/algo-visualizer/components/ui/Sidebar';
+import { ControlPanel } from '@/components/interactives/algo-visualizer/components/ui/ControlPanel';
+import { Pseudocode } from '@/components/interactives/algo-visualizer/components/ui/Pseudocode';
+import { MetricsPanel } from '@/components/interactives/algo-visualizer/components/ui/MetricsPanel';
+import { SortingVisualizer } from '@/components/interactives/algo-visualizer/components/visualizers/SortingVisualizer';
+import { GraphVisualizer } from '@/components/interactives/algo-visualizer/components/visualizers/GraphVisualizer';
 
 export function AlgoVisualizer() {
   const [selectedId, setSelectedId] = useState('bubble');

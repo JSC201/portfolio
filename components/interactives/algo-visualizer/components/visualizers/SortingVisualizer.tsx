@@ -1,6 +1,6 @@
 'use client';
 
-import type { Step, SortState } from '@/algo-visualizer/lib/types';
+import type { Step, SortState } from '@/components/interactives/algo-visualizer/lib/types';
 
 const COLORS = {
   sorted:    '#22c55e',

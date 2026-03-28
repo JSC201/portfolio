@@ -1,6 +1,6 @@
 'use client';
 
-import type { ComplexityInfo } from '@/algo-visualizer/lib/types';
+import type { ComplexityInfo } from '@/components/interactives/algo-visualizer/lib/types';
 
 interface MetricsPanelProps {
   metrics: Record<string, number | string>;

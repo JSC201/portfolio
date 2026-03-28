@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import type { Step } from '@/algo-visualizer/lib/types';
+import type { Step } from '@/components/interactives/algo-visualizer/lib/types';
 
 export interface RunnerState<S> {
   step: Step<S> | null;

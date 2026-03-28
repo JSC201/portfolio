@@ -1,6 +1,6 @@
 'use client';
 
-import type { Step, GraphState, NodeStatus } from '@/algo-visualizer/lib/types';
+import type { Step, GraphState, NodeStatus } from '@/components/interactives/algo-visualizer/lib/types';
 
 interface GraphVisualizerProps {
   step: Step<GraphState> | null;

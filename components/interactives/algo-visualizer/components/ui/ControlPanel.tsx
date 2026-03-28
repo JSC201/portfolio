@@ -1,7 +1,7 @@
 'use client';
 
-import type { RunnerState } from '@/algo-visualizer/hooks/useRunner';
-import type { AlgorithmViewType } from '@/algo-visualizer/lib/types';
+import type { RunnerState } from '@/components/interactives/algo-visualizer/hooks/useRunner';
+import type { AlgorithmViewType } from '@/components/interactives/algo-visualizer/lib/types';
 
 interface ControlPanelProps {
   runner: RunnerState<unknown>;
