@@ -1,7 +1,7 @@
 import { getProject, getProjects } from '@/lib/content'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
-import { AlgoVisualizer } from '@/algo-visualizer/components/AlgoVisualizer'
+import { AlgoVisualizer } from '@/components/interactives/algo-visualizer/components/AlgoVisualizer'
 export async function generateStaticParams() {
   const projects = getProjects()
   return projects.map((p) => ({ slug: p.slug }))

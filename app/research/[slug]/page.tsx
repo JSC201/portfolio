@@ -1,7 +1,7 @@
 import { getResearchPiece, getResearchPieces } from '@/lib/content'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
-import NeuronSimulator from '@/components/NeuronSimulator'
+import NeuronSimulator from '@/components/interactives/neuron-model/NeuronSimulator'
 
 export async function generateStaticParams() {
   const pieces = getResearchPieces()
