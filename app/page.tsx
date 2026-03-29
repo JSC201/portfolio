@@ -16,18 +16,15 @@ export default function Home() {
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
           <div className="text-neutral-600 leading-relaxed space-y-4">
             <p>
-              Hello! I&apos;m a Data Platform Engineer at First Principles, currently building financial market
+              Hello! 
+              </p>
+            <p>
+              I&apos;m a Data Platform Engineer at First Principles, currently building financial market
               data infrastructure for Mosaic.
-            </p>
+              </p>
             <p>
-              Before I wrote a line of code professionally, I led B2B sales and operations in a high-volume business 
-              environment, where I built revenue-generating partnerships, negotiated enterprise contracts, and optimized 
-              operational workflows. That experience shaped how I think about systems today. Every decision is a tradeoff.
-              How something is actually used should drive its design, and ultimately what matters most is what
-              holds up under real pressure. 
-            </p>
-            <p>
-              Feel free to explore my projects and research below. Thank you for stopping by!            </p>
+              Feel free to explore my projects and research below. Thank you for stopping by!            
+              </p>
           </div>
         </div>
         <img
