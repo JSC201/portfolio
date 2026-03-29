@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Lora } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import Nav from '@/components/nav'
 import Footer from '@/components/footer'
 import './globals.css'
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main className="px-10 pt-5 pb-16">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
