@@ -10,7 +10,7 @@ export default function Home() {
     <div className="space-y-20">
 
       {/* Hero */}
-      <section className="flex justify-between items-start gap-16 px-16">
+      <section className="flex justify-between items-start gap-16">
         <div className="max-w-sm">
           <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
