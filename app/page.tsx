@@ -13,8 +13,8 @@ export default function Home() {
       <section>
         <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
         <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
-        <div className="flex items-start gap-8 ml-8">
-          <div className="text-neutral-600 leading-relaxed space-y-4 pt-1">
+        <div className="flex items-start gap-8">
+          <div className="text-neutral-600 leading-relaxed space-y-4">
             <p>
               Data Platform Engineer at First Principles, building financial market
               data infrastructure for Mosaic.
@@ -29,7 +29,7 @@ export default function Home() {
           <img
             src="/Hiking.jpg"
             alt="Justin Chang"
-            className="shrink-0 w-48 h-60 object-cover rounded-2xl [object-position:center_35%]"
+            className="shrink-0 w-64 h-80 object-cover rounded-2xl [object-position:center_35%]"
           />
         </div>
       </section>
