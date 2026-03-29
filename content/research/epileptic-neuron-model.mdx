@@ -28,7 +28,7 @@ Click each preset to see how the membrane potential trace and action potential c
 
 ## Key Results
 
-<div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1px',margin:'2rem 0',background:'#d4d4d4',borderRadius:'0.5rem',overflow:'hidden'}}>
+<div className="not-prose"><div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1px',margin:'2rem 0',background:'#d4d4d4',borderRadius:'0.5rem',overflow:'hidden'}}>
   <div style={{background:'#faf8f4',padding:'1.5rem 1rem',textAlign:'center'}}>
     <div style={{fontSize:'2rem',fontWeight:'700',fontFamily:'sans-serif',color:'#737373',lineHeight:1,marginBottom:'0.5rem'}}>4</div>
     <div style={{fontSize:'0.75rem',fontFamily:'sans-serif',color:'#666'}}>Normal neuron</div>
@@ -45,7 +45,7 @@ Click each preset to see how the membrane potential trace and action potential c
     <div style={{fontSize:'2rem',fontWeight:'700',fontFamily:'sans-serif',color:'#15803d',lineHeight:1,marginBottom:'0.5rem'}}>27</div>
     <div style={{fontSize:'0.75rem',fontFamily:'sans-serif',color:'#666'}}>With ketamine</div>
   </div>
-</div>
+</div></div>
 
 The epileptic model produced nearly 10× the spike rate of the normal control. Treatment with both drugs reduced the firing rate, supporting the hypothesis. Phenytoin reduced spikes by 37% from the epileptic baseline; ketamine by 29%. Phenytoin's larger reduction is consistent with its primary mechanism—sodium channel blockade is more effective against the rapid, repetitive firing that dominates epileptic bursting than NMDA antagonism alone.
 
@@ -77,14 +77,14 @@ Gating variables are updated using the exponential integration method, which giv
 
 The epileptic model was produced by modifying conductance parameters to replicate the hyperexcitability characteristic of epileptic pyramidal neurons:
 
-<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0.5rem 3rem',fontFamily:'sans-serif',fontSize:'0.82rem',margin:'1rem 0',color:'#555'}}>
+<div className="not-prose"><div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0.5rem 3rem',fontFamily:'sans-serif',fontSize:'0.82rem',margin:'1rem 0',color:'#555'}}>
   <div>↑ gNa: 100 → 160 (enhanced depolarization)</div>
   <div>↓ gK: 45 → 18 (slowed repolarization)</div>
   <div>↑ gCa: 0.3 → 0.4 (prolonged depolarization)</div>
   <div>↓ gLeak: 0.3 → 0.1 (increased excitability)</div>
   <div>↑ gNMDA: 0.15 → 0.25 (sustained bursting)</div>
   <div>↑ I_app: 100 → 200 pA, extended to 800 ms</div>
-</div>
+</div></div>
 
 ---
 
