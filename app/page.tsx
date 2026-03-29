@@ -20,7 +20,10 @@ export default function Home() {
               data infrastructure for Mosaic.
               </p>
             <p>
-              Feel free to explore my projects and research below. Thank you for stopping by!            
+              Feel free to explore my projects and research below. 
+              </p>
+             <p> 
+              Thank you for stopping by!            
               </p>
           </div>
         </div>
