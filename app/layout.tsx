@@ -23,6 +23,9 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: 'Justin Chang',
   description: 'Data Engineer and AI Researcher.',
+  icons: {
+    icon: '/JC-flavicon-512x512.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
