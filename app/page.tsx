@@ -27,7 +27,7 @@ export default function Home() {
         <img
           src="/Hiking.jpg"
           alt="Justin Chang"
-          className="shrink-0 w-60 h-72 object-cover rounded-2xl [object-position:center_35%]"
+          className="shrink-0 w-64 h-80 object-cover rounded-2xl mt-6 [object-position:center_35%]"
         />
       </section>
 
