@@ -12,8 +12,8 @@ export default function Home() {
       {/* Hero */}
       <section className="flex justify-between items-start gap-16 px-16">
         <div className="max-w-sm">
-          <h1 className="text-4xl font-semibold tracking-tight mb-2 -ml-8">Justin J. Chang</h1>
-          <p className="text-neutral-500 mb-8 -ml-8">Data Engineer &amp; AI Researcher</p>
+          <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
+          <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
           <div className="text-neutral-600 leading-relaxed space-y-4">
             <p>
               Data Platform Engineer at First Principles, currently building financial market
