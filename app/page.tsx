@@ -22,9 +22,6 @@ export default function Home() {
             <p>
               Focused on designing reliable data systems that hold up under real-world constraints.
             </p>
-            <p>
-              Projects and research are available below.
-            </p>
              <p>
               Thank you for stopping by!
             </p>
