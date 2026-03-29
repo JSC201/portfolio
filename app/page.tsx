@@ -14,7 +14,7 @@ export default function Home() {
         <div className="max-w-sm">
           <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
-          <div className="text-neutral-600 leading-relaxed space-y-4">
+          <div className="text-neutral-600 leading-relaxed space-y-4 ml-8">
             <p>
               Data Platform Engineer at First Principles, currently building financial market
               data infrastructure for Mosaic.
