@@ -11,20 +11,23 @@ export default function Home() {
 
       {/* Hero */}
       <section className="flex justify-between items-start gap-16">
-        <div className="max-w-sm">
+        <div className="max-w-md">
           <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
           <div className="text-neutral-600 leading-relaxed space-y-4 ml-8">
             <p>
-              Data Platform Engineer at First Principles, currently building financial market
+              Data Platform Engineer at First Principles, building financial market
               data infrastructure for Mosaic.
-              </p>
+            </p>
             <p>
-              Feel free to explore my projects and research below. 
-              </p>
-             <p> 
-              Thank you for stopping by!            
-              </p>
+              Focused on designing reliable data systems that hold up under real-world constraints.
+            </p>
+            <p>
+              Projects and research are available below.
+            </p>
+             <p>
+              Thank you for stopping by!
+            </p>
           </div>
         </div>
         <img
