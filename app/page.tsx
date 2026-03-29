@@ -10,11 +10,16 @@ export default function Home() {
     <div className="space-y-20">
 
       {/* Hero */}
-      <section className="flex justify-between items-start gap-16">
-        <div className="max-w-md">
+      <section className="flex items-start gap-8 ml-8">
+        <img
+          src="/Hiking.jpg"
+          alt="Justin Chang"
+          className="shrink-0 w-48 h-60 object-cover rounded-2xl [object-position:center_35%]"
+        />
+        <div className="pt-1">
           <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
-          <div className="text-neutral-600 leading-relaxed space-y-4 ml-8">
+          <div className="text-neutral-600 leading-relaxed space-y-4">
             <p>
               Data Platform Engineer at First Principles, building financial market
               data infrastructure for Mosaic.
@@ -22,16 +27,11 @@ export default function Home() {
             <p>
               Focused on designing reliable data systems that hold up under real-world constraints.
             </p>
-             <p>
+            <p>
               Thank you for stopping by!
             </p>
           </div>
         </div>
-        <img
-          src="/Hiking.jpg"
-          alt="Justin Chang"
-          className="shrink-0 w-64 h-80 object-cover rounded-2xl mt-6 [object-position:center_35%]"
-        />
       </section>
 
       {/* Projects */}
