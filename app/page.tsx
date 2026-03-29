@@ -11,15 +11,12 @@ export default function Home() {
 
       {/* Hero */}
       <section className="flex justify-between items-center gap-16">
-        <div className="flex-1">
+        <div className="max-w-sm">
           <h1 className="text-4xl font-semibold tracking-tight mb-2">Justin J. Chang</h1>
           <p className="text-neutral-500 mb-8">Data Engineer &amp; AI Researcher</p>
           <div className="text-neutral-600 leading-relaxed space-y-4">
             <p>
-              Hello! 
-              </p>
-            <p>
-              I&apos;m a Data Platform Engineer at First Principles, currently building financial market
+              Data Platform Engineer at First Principles, currently building financial market
               data infrastructure for Mosaic.
               </p>
             <p>
