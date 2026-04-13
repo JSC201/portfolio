@@ -6,7 +6,6 @@ export default function About() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">About</h2>
         <ul className="space-y-2 text-neutral-600 ml-4">
           <li>Based in New York City.</li>
-          <li>Background in B2B sales and operations.</li>
           <li>Inspired by builders who challenge the status quo.</li>
           <li>Curious about the implications of those innovations.</li>
         </ul>
